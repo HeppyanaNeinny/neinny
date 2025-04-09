@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Pribadi</title>
+    <style>
+        /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink;
+    color: read;
+    line-height: 1.6;
+    padding-top: 50px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 80px 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.foto-profil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    transform: translate(20px);
+}
+
+table {
+    width: 100%;
+    margin-top: 5px;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.galeri {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeri .foto, .galeri .video {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.galeri img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: horizontal;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    background-color: #f4f4f4; /* Memberikan warna latar belakang pada header */
+}
+
+#dosen table {
+    width: 50%; /* Membuat tabel lebih ramping agar lebih mudah dibaca */
+    margin: 0 auto; /* Menyelaraskan tabel ke tengah */
+}
+
+#dosen table tr td {
+    vertical-align: middle; /* Menyelaraskan isi tabel secara vertikal */
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Gaya untuk item menu yang aktif */
+nav ul li a.active {
+    color: #008000;  /* Ubah warna teks saat menu aktif */
+    font-weight: bold; /* Menebalkan font */
+}
+
+  </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#dosen">Dosen & Mata Kuliah</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#formulir">Formulir Pendaftaran</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+    // Mengambil semua link navigasi
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    // Menambahkan event listener untuk setiap link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // Menghapus kelas "active" dari semua link
+            navLinks.forEach(item => item.classList.remove("active"));
+            // Menambahkan kelas "active" ke link yang diklik
+            this.classList.add("active");
+        });
+    });
+</script>
+
+
+    <!-- Halaman 1: Beranda, Foto Profil, Biodata, Video -->
+    <section id="beranda">
+        <h1>Welcome To My Acount</h1>
+    </section>
+
+    <section id="profil">
+        <h2>Foto Profil</h2>
+
+        <img src="C:\Users\ACER\Documents\sublim text\foto\profil 2.webp" alt="Foto Profil" class="foto-profil">
+    </section>
+
+    <section id="biodata">
+        <h2>Biodata Pribadi</h2>
+        <table>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td>Neinny Al Heppyana</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>13 February 2004</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Bermis 1 selong</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>heppyanaal@gmail.com</td>
+            </tr>
+            <tr>
+                <td>No. Telepon</td>
+                <td>081-912-210-039</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="video">
+        <h2>Video YouTube</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="C:\Users\ACER\Documents\sublim text\video yt\Belajar Coding Web Untuk Pemula Mulai Dari Mana (1).mp4" title="YouTube video coding pemula" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Halaman 2: Nama Dosen dan Jadwal Mata Kuliah -->
+    <section id="dosen">
+    <h2>Nama Dosen dan Mata Kuliah</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Dosen</th>
+                <th>Mata Kuliah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jamaluddin</td>
+                <td>Jaringan Dasar</td>
+            </tr>
+            <tr>
+                <td>Rasyid Hardi Wirasasmita</td>
+                <td>Telaah Kurikulum Pendidikan dan Teknologi Kejuruan</td>
+            </tr>
+            <tr>
+                <td>Heri Kuswanto</td>
+                <td>Pemrograman Web</td>
+            </tr>
+            <tr>
+                <td>Samsul Lutfi</td>
+                <td>Komputer Grafis</td>
+            </tr>
+            <tr>
+                <td>Yosi Nur Kholiso</td>
+                <td>Pengembangan Aplikasi Mobile</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+    <!-- Halaman 3: Galeri Foto dan Video -->
+    <section id="galeri">
+        <h2>Galeri Foto & Video</h2>
+        <div class="galeri">
+            <div class="foto">
+                <img src="C:\Users\ACER\Documents\sublim text\foto\Keindahan candi prambanan.jpg" alt="Foto 1">
+            </div>
+            <div class="foto">
+                <img src="C:\Users\ACER\Documents\sublim text\foto\moment bersama keluarga.jpg" alt="Foto 2">
+            </div>
+            <div class="foto">
+                <img src="C:\Users\ACER\Documents\sublim text\foto\pemandangan alam with teman-teman.jpg" alt="Foto 3">
+            </div>
+            <div class="foto">
+                <img src="C:\Users\ACER\Documents\sublim text\foto\studio foto with keluarga diskusi.webp" alt="Foto 4">
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="C:\Users\ACER\Documents\sublim text\video\pengenalan uny.mp4" title="Codingan Dasar" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Halaman 4: Formulir Pendaftaran Lomba Tahunan -->
+    <section id="formulir">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="jenis-kelamin">Jenis Kelamin</label>
+                <div>
+                    <input type="radio" id="pria" name="jenis-kelamin" value="pria">
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jenis-kelamin" value="wanita">
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tingkat sekolah">Tingkat Sekolah</label>
+                <select id="tingkat sekolah" name="tingkat sekolah">
+                    <option value="SD">SD</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SMA">SMA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="minat">Jenis Lomba</label><br>
+                <input type="checkbox" id="lomba1" name="lomba" value="pemrograman">
+                <label for="lomba1">Pemrograman</label><br>
+                <input type="checkbox" id="lomba2" name="lomba" value="desain">
+                <label for="lomba2">Desain</label><br>
+                <input type="checkbox" id="lomba3" name="lomba" value="video grafer">
+                <label for="lomba3">Video Grafer</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Daftar</button>
+            </div>
+
+            <script>
+    // Fungsi untuk menangani event tombol
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah halaman reload ketika tombol diklik
+        alert("Terima kasih telah mendaftar!"); // Menampilkan pesan konfirmasi
+    });
+</script>
+
+        </form>
+    </section>
+
+</body>
+</html>
